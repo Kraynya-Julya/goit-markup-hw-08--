@@ -1,0 +1,88 @@
+.clients-section {
+   padding-top: 30px;
+    background-color: var(--title--text-color);
+    @media screen and (min-width: 768px) {
+        flex-basis: calc(100% / 2 - 90px);
+        padding-top: 60px;
+        padding-bottom: 60px;
+ }   
+}
+
+.clients-section__title {
+    margin: auto;
+    margin-bottom: 30px;
+    font-family: Roboto;
+font-style: normal;
+text-align: center;
+@include font (28px, 700, 42px, 0.03em );
+color: var(--primary-text-color);
+@media screen and (min-width: 768px){
+    margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px){
+@include font (36px, 700, 42px, 0.03em );
+margin-bottom: 50px;
+}
+}
+
+.clients-list {
+    // @extend %align-items;
+    // justify-content: center;
+    // fill: currentColor;
+    @media screen and (max-width: 1199px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+    @media screen and (min-width: 1200px){
+        width: 1200px;
+        display: flex;
+    }
+}
+.clients-list__item {
+    // @extend %align-items;
+    // justify-content: center;
+    // & + .clients-list__item {
+    //     margin-left: 30px;
+    // }
+    @media screen and (min-width: 480px) and (max-width: 767px){
+        flex-basis: calc((100% - 60px) / 2);
+        margin: 15px;
+    }
+    @media screen and (min-width: 768px){
+        flex-basis: calc((100% - 90px) / 3);
+        margin: 15px;
+    }
+    @media screen and (min-width: 1200px){
+        flex-wrap: nowrap;
+    }
+}
+
+
+.clients-list__link {
+    @extend %bg; 
+    // width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    transition: border-color 1px solid var(#afb1b8);
+    &:hover,
+    &:focus {
+        border-color: var(--accent-color);
+    &:hover .clients-list__clients, 
+    &:focus .clients-list__clients {
+    fill: var(--accent-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    border-color: var(--accent-color), 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+}
+   
+.clients-list__clients {
+    fill:currentColor;
+    @extend %bg;   
+    width: 106px;
+    height: 60px;
+    fill: #afb1b8;
+  
+}

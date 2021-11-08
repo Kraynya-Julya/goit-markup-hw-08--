@@ -1,0 +1,95 @@
+.section-btn {
+    margin: 0;
+    // padding-top: 93px
+  }
+    
+  
+  .item {
+    // @extend %align-items;
+    // justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    @media screen and (min-width: 768px){
+      justify-content: center;
+    margin-bottom: 30px;
+    }
+  }
+  
+  .text-button {
+    @include font (16px, 500, 26px, 0.03em);
+    text-align: center;
+    color: var(--title--text-color);
+    cursor: pointer;
+  }
+  
+  .buton-text {
+    font-family: Roboto, sans-serif;
+    flex-basis: calc(100% / 5 - 8px);
+    @include font (16px, 500, 26px, 0.03em);
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    border: transparent;
+    border-radius: 4px;
+    padding: 8px 21px;
+    border-radius: 4px;
+    background-color: #f5f4fa;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      transition-property: background-color, color, box-shadow;
+      transition-duration: 250ms, 250ms, 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
+      transition-delay: 0s, 0s, 0s;
+      &:hover, 
+      &:focus {
+      background-color: var(--accent-color);
+      color: var(--title--text-color)
+    }
+  }
+  
+  .button-item-list{
+    fill: var(--primary--bg-color);
+    &:not(:last-child){
+      // margin-bottom: 15px;
+    }
+    @media screen and (min-width: 768px){
+      margin: 0;
+    }
+  }
+  
+  .item {
+    margin: auto;
+    padding-bottom: 40px;
+    // padding-bottom: 56px;
+    @media screen and (min-width: 768px){
+      padding-bottom: 36px;
+    }
+    @media screen and (min-width: 1200px){
+      padding-bottom: 56px;
+    }
+  }
+
+  .main-button {
+    padding-top: 66px;
+    padding-bottom: 60px;
+    background-color: var(--primary--bg-color);
+    @media screen and (min-width: 1200px){
+      padding-bottom: 0;
+    }
+  }
+
+  
+  .buton-text-item {
+    font-family: Roboto;
+    @include font (16px, 500, 26px, 0.03em);
+    color: var(--title--text-color);
+    background-color: var(--accent-color);
+  }
+ 
+  .button-item {
+    font-family: Roboto, sans-serif;
+    @include font (16px, 500, 26px, 0.03em);
+    color: var(--accent-color);
+  }
+  
